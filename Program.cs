@@ -1,4 +1,4 @@
-﻿ // See https://aka.ms/new-console-template for more information
+ // See https://aka.ms/new-console-template for more information
 
 // classname objectname = new classname();
 
@@ -86,3 +86,34 @@ customer.info(56);
 
 SamplesArrayList sa = new SamplesArrayList();
 sa.print();
+
+
+bmi obj = new bmi();
+
+
+// threads calling 
+//single threads
+Threads_single threads = new Threads_single();
+//threads.t1();
+
+
+
+
+//Multiple threads
+Thread t11 = new Thread(new ThreadStart(threads.t1));
+Thread t12 = new Thread(new ThreadStart(threads.t2));
+Thread t13 = new Thread(new ThreadStart(threads.t3));
+// t11.Start();
+// t12.Start();
+// t13.Start();
+
+
+// read file 
+//File_Read file_Read = new File_Read();
+//file_Read.writedata("welcome to Dot Net");
+//file_Read.getFileData();
+
+read read=new read();
+read.writedat("welcome to this");
+read.getdata();
+
