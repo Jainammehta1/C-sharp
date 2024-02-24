@@ -1,30 +1,37 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication2._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Test_Data._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Button ID="Button1" runat="server" Text="click on these" OnClick="msg"/><br /><br />
-    <asp:Button ID="Button2" runat="server" Text="click to reset" OnClick="msg_remove"/><br /><br />
-    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+    <main>
+        <section class="row" aria-labelledby="aspnetTitle">
+               
+    <asp:Button ID="loadDataButton" runat="server" Text="Load Data" OnClick="loadDataButton_Click" />
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView> 
 
-    <input id="Text1" type="text" runat="server" />
+         </section>
+ 
+       
+<form id="myForm" method="post">
+    <div>
+        <label forname">Name:</label>
+        <asp:TextBox ID="name" runat="server"></asp:TextBox>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <asp:TextBox ID="email" runat="server" TextMode="Email" Required="true"></asp:TextBox>
+    </div>
+    <div>
+        <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="myFormSubmit" />
+    </div>
+</form>
+<div id="message">
+    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+</div>
+        
+ 
 
-     <asp:Button ID="Button4" runat="server" Text="Button" OnClick="print_data"/><br /><br />
-   
-    <asp:Calendar ID="Calendar1" runat="server" ></asp:Calendar>
-    <asp:Button ID="Button3" runat="server" Text="Button"/><br /><br />
+         
 
-    <asp:Label ID="Label2" runat="server" Text="Click"></asp:Label><br /><br />
-    <asp:Label ID="Label3" runat="server" Text="Click here"></asp:Label><br /><br />
+    </main>
 
-    Male<input id="Radio1" name="1"type="radio"/>
-    Female<input id="Radio2"name="1" type="radio"/>
-    <input id="File1" type="file" />
-    Your Password<input id="Password1" type="password" />
-    <img  src="image/samosa.png"/>
-    <select id="Select1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-
-    </select>
 </asp:Content>
